@@ -1,32 +1,30 @@
-# Iris ML Pipeline with DVC
+# Iris ML Pipeline with DVC (Week 2 Assignment)
 
-This project trains a Random Forest model on the Iris dataset and tracks the dataset and model using DVC.
+This repository trains a Random Forest model on the Iris dataset and tracks both the dataset and model versions using **DVC** and **Git**.
 
-## 📁 Structure
+We simulate two data versions:
+- **v1.0**: 100 rows of `iris.csv`
+- **v2.0**: Full 150 rows
 
-- `data/iris.csv` — input dataset
-- `models/model.joblib` — output model
-- `train.py` — training script
-- `dvc` — handles data and model versioning
+---
 
-## 🚀 Quick Start
+## 🧰 Requirements
+
+- Python 3.7+
+- Git
+- [DVC](https://dvc.org)
+- `scikit-learn`, `pandas`, `joblib`
+
+---
+
+## 📦 Installation
 
 ```bash
-# Clone the repo
-git clone https://github.com/yourusername/iris-pipeline.git
-cd iris-pipeline
+git clone https://github.com/Mlfords123/week2.git
+cd week2
 
-# Set up environment
 python3 -m venv .env
 source .env/bin/activate
+
 pip install -r requirements.txt
-
-# Get data
-dvc pull
-
-# Train
-python train.py
-
-# Push model to DVC remote
-dvc add models/model.joblib
-dvc push
+pip install dvc
