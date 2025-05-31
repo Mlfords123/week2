@@ -6,7 +6,7 @@ import joblib
 import os
 
 # Load CSV
-df = pd.read_csv("data/iris.csv")
+df = pd.read_csv("iris.csv")
 
 # Split features and target
 X = df.drop(columns=["target"])
